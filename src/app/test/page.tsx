@@ -32,7 +32,7 @@ const Page = () => {
     return (
         <div>
             <h1>Teste OCR</h1>
-            <input type="file" accept="image/*" onChange={upload} />
+            <input type="file" accept="image/*, video/*" capture='user' onChange={upload} />
             <p>{msg}</p>
             <textarea value={text} readOnly rows={10} cols={50} />
             <p>Texto reconhecido:</p>
