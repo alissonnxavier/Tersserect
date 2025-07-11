@@ -15,10 +15,11 @@ const Page = () => {
         if (file) {
             setText('');
 
-            const { data } = await Tesseract.recognize(file, 'por');
+            const { data } = await Tesseract.recognize(file);
 
             setText(data.text);
-
+            //@ts-ignore
+            
             setMsg('');
         } else {
             setMsg("Erro: Necessário selecionar uma imagem!");
